@@ -1,6 +1,6 @@
 This is an older, unfinished version of my [Catan Companion](https://github.com/CK6853/CatanCompanion). 
 
-I don't really feel comfortable uploading an unfinished project that I'm not likely to work on again (at least for a while), but apparently this is one of the few times I've made a full-stack web app that I can post publicly without violating some kind of confidentiality agreement or copyright (probably - it still contains images from the official Catan board game that might technically not be ok 😅). 
+I don't really feel comfortable uploading an unfinished project that I'm not likely to work on again (at least for a while), but apparently this is one of the few times I've made a functional full-stack web app that I can post publicly without violating some kind of confidentiality agreement. 
 
 The original plan for the Catan Companion was to completely virtualise resource cards, and any game actions associated with them. Resource gathering, robber discards, player trading, and spending would all be handled by users' mobile devices, with one extra to be used as the "Banker". Each of these would be using a React frontend to interact with an Express backend and associated database. 
 
