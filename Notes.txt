@@ -1,0 +1,80 @@
+---Need---
+Frontend
+	Player dashboard
+		Resources
+		Harbours/Swapping
+		Submenus for
+			Outgoing trades
+			Discarding
+			(Later) Spending (can use Discard as placeholder)
+		Popups for
+			Gold
+			(Later) Robber discard
+			Incoming trades
+	Bank page
+		Add settlements
+		Toggle settlements/enable all
+		Roll
+		Theft
+		Manage player resources if needed
+		(Later) Log
+	Reset page
+
+Backend
+	Trades
+		"Pending Trades" object on player class? 
+	Harbour/gold trading handled by backend?
+	(Later) Logging
+
+
+Basics first
+TOUCH SCREEN COMPATIBLE
+Might need client/server architecture
+	Players/bank send requests to DB server
+	Might be hard to keep updated
+	But may not be able to share state otherwise
+Leave breadcrumbs for later addition of logging
+	e.g. whenever a player or the bank changes the DB
+	just says "placeholder, add log entry here later"
+	Maybe sooner rather than later?
+Main page has you enter a name
+Also need a (protected somehow) reset button to clear DB for new game
+Entering the name initialises you in the DB, and redirects to a page with your name
+Router routes named pages to the same name in the DB
+	Protected from refresh/accidental close
+navigating to a non-existent page redir to main
+
+Players have associated objects:
+Harbours (actually make object later), resources (5+gold)
+Discard functionality (for over 7, placeholder for spending)
+Player pages need to reload state
+	See if I can have UseEffect update based on DB
+
+Master page for bank
+To start with, add resources to players from list of active users
+May not have to update page state (except for game log)
+	actual DB handles data (+/-)
+	only players need to see resource numbers
+
+More advanced: 
+Add harbours to players - display little emblems somewhere on the page
+Add a resource-swapping menu
+	make a button for each resource 
+	with default as x4
+	changes automatically as harbours added
+	Light up if player has enough resources
+	Tapping it trades that many of the resource for a gold
+Any time the player gets gold, popup to choose what to turn it into
+Spending buttons - automatically subtract resources needed for a purchase
+Add trading between players
+Robber functionality - stealing
+Automatic resource allocation after roll
+	Either hex-based or settlement-based
+	Hex-based, easier for robber functionality
+	settlement-based might be cleaner looking
+Robber functionality - block resource
+Game log submenu for bank
+	Player got X resources
+	Player spent X, got Y
+	Filter by player
+	Actually has to refresh state often
