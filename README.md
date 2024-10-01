@@ -5,7 +5,7 @@ I don't really feel comfortable uploading an unfinished project that I'm not lik
 The original plan for the Catan Companion was to completely virtualise resource cards, and any game actions associated with them. Resource gathering, robber discards, player trading, and spending would all be handled by users' mobile devices, with one extra to be used as the "Banker". Each of these would be using a React frontend to interact with an Express backend and associated database. 
 
 This would have been cool, but...
-1. I don't like the aesthetic of everyone using their phones to play a board game, and I think my family would have been on the same page here
+1. I don't like the aesthetic of everyone using their phones to play a board game, and I think my family (who this whole project is for) would have been on the same page here
 2. Complex implementation, more prone to failure
 3. Can't be used by more than one game at once
 4. Complete overkill for the actual issue we had - resource gathering taking too long
